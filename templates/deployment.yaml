@@ -36,6 +36,10 @@ spec:
             httpGet:
               path: /actuator/health
               port: 8080
+         readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
