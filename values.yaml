@@ -46,6 +46,7 @@ ingress:
   className: "nginx"
   annotations:
     nginx.ingress.kubernetes.io/affinity-mode: cookie
+
 #    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
 #    alb.ingress.kubernetes.io/scheme: internet-facing
 #    alb.ingress.kubernetes.io/target-type: ip
