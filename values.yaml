@@ -5,7 +5,8 @@
 replicaCount: 3
 
 image:
-  repository: public.ecr.aws/h2w6a0g5/evolution-game-service
+  #repository: public.ecr.aws/h2w6a0g5/evolution-game-service
+  repository: 462027713001.dkr.ecr.eu-west-1.amazonaws.com/game-service
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: latest
