@@ -5,7 +5,7 @@
 replicaCount: 6
 
 image:  
-  repository: 462027713001.dkr.ecr.eu-north-1.amazonaws.com/evolution-game-service
+  repository: 462027713001.dkr.ecr.eu-central-1.amazonaws.com/evolution-game-service
   #repository: public.ecr.aws/h2w6a0g5/evolution-game-service
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
@@ -44,7 +44,7 @@ service:
 
 ingress:
   enabled: true
-  # className: "nginx"
+  className: "nginx"
   # annotations:
   #  nginx.ingress.kubernetes.io/affinity: cookie
   #  nginx.ingress.kubernetes.io/affinity-mode: persistent
