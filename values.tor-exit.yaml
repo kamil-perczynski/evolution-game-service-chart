@@ -1,0 +1,23 @@
+# Default values for evolution-game-service.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 3
+
+image:  
+  repository: 462027713001.dkr.ecr.eu-central-1.amazonaws.com/tor-exit-addresses
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: latest
+
+ingress:
+  enabled: true
+  className: "nginx"
+  hosts:
+  - host: "tor-exit-addresses.kamil.perczynski.cloud"
+    paths:
+      - path: /
+        pathType: Prefix
+  tls:
+    - hosts:
+        - tor-exit-addresses.kamil.perczynski.cloud
