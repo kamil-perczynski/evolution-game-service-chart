@@ -1,0 +1,21 @@
+replicaCount: 2
+
+image:  
+  repository: 462027713001.dkr.ecr.eu-central-1.amazonaws.com/bull-and-bear
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: latest
+
+nameOverride: "bull-and-bear"
+fullnameOverride: "bull-and-bear"
+ingress:
+  enabled: true
+  className: "nginx"
+  hosts:
+  - host: "bull-and-bear.kamil.perczynski.cloud"
+    paths:
+      - path: /
+        pathType: Prefix
+  tls:
+    - hosts:
+        - bull-and-bear.kamil.perczynski.cloud
